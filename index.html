@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>un-bench · Closing the Simulacra Gap in Development Data</title>
+<meta name="description" content="A NeurIPS 2026 competition to validate AI representations of hard-to-reach populations, evaluated on unreleased UN microdata." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─────────────────────────── HEADER ─────────────────────────── -->
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="un-bench home">
+    <svg class="logo" viewBox="0 0 40 44" aria-hidden="true">
+      <path d="M0 22 a10 10 0 0 1 20 0 V44 H0 Z" fill="var(--coral)"/>
+      <path d="M20 11 a10 10 0 0 1 20 0 V22 H20 Z" fill="var(--cream)"/>
+      <path d="M20 22 a10 10 0 0 1 20 0 V44 H20 Z" fill="var(--coral)"/>
+    </svg>
+    <span class="wordmark">un-bench<span class="dot">.</span>org</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#task">Task</a>
+    <a href="#data">Data</a>
+    <a href="#rules">Rules</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#prizes">Prizes</a>
+    <a href="#team">Team</a>
+    <a class="nav-cta" href="mailto:neurips-un-benchmark@stanford.edu?subject=un-bench%20launch%20notification">Get notified</a>
+  </nav>
+</header>
+
+<!-- ─────────────────────────── HERO ─────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 360 540" preserveAspectRatio="xMinYMid meet">
+      <path d="M0 90 a90 90 0 0 1 180 0 V540 H0 Z" fill="var(--coral)"/>
+      <path d="M90 270 a90 90 0 0 1 180 0 V450 H90 Z" fill="var(--cream)"/>
+      <path d="M180 360 a90 90 0 0 1 180 0 V540 H180 Z" fill="var(--coral)"/>
+    </svg>
+  </div>
+
+  <div class="hero-text">
+    <p class="eyebrow">NeurIPS 2026 · Competition Track</p>
+    <h1>Closing the<br/>Simulacra Gap in<br/>Development Data</h1>
+    <p class="lede">
+      A NeurIPS 2026 competition to validate AI representations of hard-to-reach populations, evaluated on unreleased UN microdata.
+    </p>
+    <span class="rule"></span>
+    <ul class="hero-facts">
+      <li><strong>Public launch</strong><span>August 1, 2026</span></li>
+      <li><strong>Two tracks</strong><span>Imputation · Cross-respondent</span></li>
+      <li><strong>~41,300 respondents</strong><span>19 countries · UNICEF &amp; UNHCR</span></li>
+    </ul>
+    <div class="hero-cta">
+      <a class="btn btn--coral" href="mailto:neurips-un-benchmark@stanford.edu?subject=un-bench%20launch%20notification">Get launch notification</a>
+      <a class="btn btn--ghost" href="#task">Read the task</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── 01 · ABOUT ─────────────────────────── -->
+<section class="section section--cream" id="about">
+  <p class="section-num">01 · About</p>
+  <h2 class="display">AI is already filling data gaps <em>for hard-to-reach populations. Nobody knows how well.</em></h2>
+
+  <div class="two-col">
+    <div class="prose">
+      <p>UNICEF, UNHCR, and humanitarian programs increasingly rely on rapid behavioural surveys to set policy and programming. Field data is slow, expensive, and gappy — driving interest in using LLMs as simulacra of specific populations to pre-test instruments, impute non-response, and run subgroup what-ifs.</p>
+      <h3 class="kicker">Why a new benchmark is needed.</h3>
+      <p>Today's evidence on whether these simulacra are faithful is contaminated. Public benchmarks (ANES, GSS, World Values Survey) are in pretraining corpora; models can memorize them. Outside WEIRD subpopulations, simulacra collapse heterogeneity and miscalibrate confidence — silently.</p>
+      <p>This competition runs on UN behavioural microdata that has never been publicly released, scored under a strictly proper rule, with a closed-evaluation architecture where submissions travel to the data rather than the other way around.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-num">~41,300</p>
+        <p class="stat-label">respondents across 19 countries in unreleased UNICEF microdata</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">0</p>
+        <p class="stat-label">of these microdata in any model's pretraining corpus</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">4</p>
+        <p class="stat-label">live UN survey programs (CRA 2.0, Faith &amp; Immunisation, MENA Climate KAP, UNHCR ERPIS)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── 02 · WHY ─────────────────────────── -->
+<section class="section section--cream" id="why">
+  <p class="section-num">02 · Why compete</p>
+  <h2 class="display">A clean dataset, a proper score, four baseline families. <em>Apples-to-apples.</em></h2>
+
+  <div class="two-col two-col--wide">
+    <div class="prose">
+      <ul class="bullets">
+        <li><strong>A new dataset, not benchmaxed.</strong> Four UN behavioural-science instruments not in any pretraining corpus.</li>
+        <li><strong>Calibration-first, log-loss-scored evaluation.</strong> A strictly proper rule that rewards truthful probabilities, not accuracy on the modal class.</li>
+        <li><strong>Apples-to-apples comparison</strong> across tabular diffusion, IRT, low-rank matrix completion, and LLM-prompted simulacra — on identical held-out masks.</li>
+        <li><strong>Open-source starter kit.</strong> MIT-licensed baselines, schema-only specification, and a synthetic sandbox at launch.</li>
+        <li><strong>Authorship path.</strong> Top-3 teams per track are invited to contribute to the Competition Track proceedings paper; grand-prize team gets an invited talk slot.</li>
+      </ul>
+    </div>
+
+    <div class="anatomy">
+      <h3 class="anatomy-title">Anatomy of the competition</h3>
+      <dl>
+        <div><dt>Task</dt><dd>Probabilistic completion of a respondent × question matrix</dd></div>
+        <div><dt>Tracks</dt><dd>(A) within-respondent imputation · (B) cross-respondent generalization</dd></div>
+        <div><dt>Data</dt><dd>UNICEF microdata (CRA 2.0, Faith &amp; Immunisation, MENA KAP) plus UNHCR ERPIS</dd></div>
+        <div><dt>Architecture</dt><dd>Closed evaluation: organizers run code; data never leaves Stanford</dd></div>
+        <div><dt>Metric</dt><dd>Mean test log-loss — strictly proper, calibration-sensitive</dd></div>
+        <div><dt>Compute cap</dt><dd>100 min on a single A100 at test; outbound network disabled</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── 03 · THE TASK ─────────────────────────── -->
+<section class="section section--cream" id="task">
+  <p class="section-num">03 · The Task</p>
+  <h2 class="display">Complete a respondent × question matrix — <em>for both behaviours and opinions.</em></h2>
+
+  <div class="task-grid">
+    <div>
+      <div class="matrix">
+        <div class="matrix-head">
+          <div class="matrix-head-cell matrix-head-cell--behavior">Reported behavior</div>
+          <div class="matrix-head-cell matrix-head-cell--opinion">Opinion</div>
+        </div>
+        <div class="matrix-body" aria-hidden="true"></div>
+        <p class="matrix-axis">N respondents × K items (≈ 41,300 × ~150 in this competition)</p>
+        <ul class="legend">
+          <li><span class="sw sw--obs"></span>Observed (training)</li>
+          <li><span class="sw sw--held"></span>Held-out — predict P(answer)</li>
+          <li><span class="sw sw--miss"></span>Genuinely missing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3 class="kicker">Formally</h3>
+      <p>Given <span class="math">X ∈ ℝ<sup>N×K</sup></span> of survey responses with mask <span class="math">Ω<sub>train</sub></span>, learn <span class="math">p̂(X<sub>ij</sub> | context)</span>. <em>Score by held-out log-loss — a strictly proper rule.</em></p>
+      <p>Items are categorical: binary, unordered nominal, ordered Likert, multi-select, and binned continuous. Skip-logic gating is treated as a distinguished response level (<span class="math">NA_GATED</span>), not as missingness — participants must place mass on it where appropriate.</p>
+
+      <div class="track-cards">
+        <div class="track-card track-card--cream">
+          <p class="track-label">Track A</p>
+          <h4>Within-respondent imputation</h4>
+          <p>A subset of items held out MCAR for each training respondent — the non-response regime.</p>
+        </div>
+        <div class="track-card track-card--burgundy">
+          <p class="track-label">Track B</p>
+          <h4>Cross-respondent generalization</h4>
+          <p>Respondents masked on all but their sociodemographics, given item descriptions and complete rows from other respondents — the simulacrum test.</p>
+        </div>
+      </div>
+      <p class="muted-note">Teams may submit to either track; the grand prize requires strong performance on both.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── 04 · DATA ─────────────────────────── -->
+<section class="section section--cream" id="data">
+  <p class="section-num">04 · Data</p>
+  <h2 class="display">Three UNICEF assets, one UNHCR instrument. <em>None publicly available.</em></h2>
+
+  <p class="prose-wide">
+    The three UNICEF assets (CRA 2.0, Faith &amp; Immunisation, MENA Climate KAP) are confirmed; the UNHCR ERPIS instrument targets Syrian refugees in four host countries and is included conditional on UNHCR data-governance approval. Participants do not receive the microdata. You receive (i) a schema-only specification with column names, types, and response-category codes; (ii) a small synthetic sandbox to debug the submission pipeline; (iii) the submission API specification.
+  </p>
+
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>CRA 2.0</th>
+          <th>Faith &amp; Immunisation</th>
+          <th>MENA Climate</th>
+          <th>ERPIS 2025</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>Countries</th><td>6</td><td>10</td><td>3</td><td>4</td></tr>
+        <tr><th>Waves</th><td>3</td><td>1</td><td>1</td><td>2</td></tr>
+        <tr><th>N total</th><td>20,229</td><td>19,847</td><td>1,236</td><td>13,821</td></tr>
+        <tr><th>Items / wave</th><td>72</td><td>26</td><td>168</td><td>110</td></tr>
+        <tr><th>Socio-demographic vars</th><td>10</td><td>5</td><td>16</td><td>15</td></tr>
+        <tr><th>Attitude / behaviour vars</th><td>50</td><td>13</td><td>129</td><td>115</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ─────────────────────────── 05 · SUBMISSION & RULES ─────────────────────────── -->
+<section class="section section--cream" id="rules">
+  <p class="section-num">05 · Submission &amp; Rules</p>
+  <h2 class="display">Submit code, not predictions. <em>Organizers run it inside the sandbox.</em></h2>
+
+  <div class="rules-grid">
+    <div class="rule-block">
+      <h3>How submission works</h3>
+      <ul>
+        <li>Submit a containerized image or a Python script + environment file that implements the defined API.</li>
+        <li>The harness loads your container, instantiates the model, runs it against the held-out cells, and returns scalar per-track scores.</li>
+        <li>Code can train on the unmasked portion of the matrix before predicting.</li>
+        <li>Outbound network access from the submission container is disabled at evaluation time.</li>
+      </ul>
+    </div>
+
+    <div class="rule-block">
+      <h3>Compute &amp; quotas</h3>
+      <ul>
+        <li>Single A100 GPU. 10-minute wall-clock budget per development submission; 100-minute budget per test submission.</li>
+        <li><strong>Development phase</strong> (Aug 1 – Oct 31, 2026): 1 leaderboard submission per team per day, scored on a fresh random 10% shard.</li>
+        <li><strong>Test phase</strong> (Nov 1 – Nov 14, 2026): 1 final test submission per team, evaluated on the full datasets.</li>
+        <li>Pretrained external weights are allowed if publicly downloadable at a fixed commit hash specified before test phase opens.</li>
+      </ul>
+    </div>
+
+    <div class="rule-block">
+      <h3>Baselines provided</h3>
+      <ul>
+        <li>Per-item marginal — trivial baseline.</li>
+        <li>2PL IRT with categorical-logistic likelihood — strong classical baseline.</li>
+        <li>Low-rank ALS matrix completion.</li>
+        <li>TabDDPM — modern tabular diffusion baseline.</li>
+        <li>All released under an MIT license alongside the schema and synthetic sandbox.</li>
+      </ul>
+    </div>
+
+    <div class="rule-block">
+      <h3>Eligibility &amp; ethics</h3>
+      <ul>
+        <li>Open to teams from academia, industry, and independent research, except where precluded by sanctions or law.</li>
+        <li>Each submission must be accompanied by a 4-page method description; top-3 teams per track supply source code under a non-commercial research license.</li>
+        <li>Microdata are not released. Any attempt to exfiltrate records is grounds for disqualification.</li>
+        <li>Ties within paired-bootstrap significance share prize money.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── 06 · TIMELINE ─────────────────────────── -->
+<section class="section section--burgundy" id="timeline">
+  <p class="section-num section-num--inv">06 · Timeline</p>
+  <h2 class="display display--inv">Eight months from launch to results at NeurIPS.</h2>
+
+  <ol class="timeline">
+    <li>
+      <p class="t-date">Jun 2026</p>
+      <span class="t-dot"></span>
+      <p class="t-title">Materials posted</p>
+      <p class="t-body">Schema, sandbox, baselines public</p>
+    </li>
+    <li>
+      <p class="t-date">Jul 2026</p>
+      <span class="t-dot"></span>
+      <p class="t-title">Dry run</p>
+      <p class="t-body">Harness stress-tested with invited teams</p>
+    </li>
+    <li>
+      <p class="t-date">Aug 1, 2026</p>
+      <span class="t-dot"></span>
+      <p class="t-title">Public launch</p>
+      <p class="t-body">Development phase opens · daily leaderboard</p>
+    </li>
+    <li>
+      <p class="t-date">Nov 1–14, 2026</p>
+      <span class="t-dot"></span>
+      <p class="t-title">Test phase</p>
+      <p class="t-body">Final test submissions · leaderboard frozen</p>
+    </li>
+    <li class="active">
+      <p class="t-date">Dec 2026</p>
+      <span class="t-dot t-dot--active"></span>
+      <p class="t-title">NeurIPS results</p>
+      <p class="t-body">Competition Track session · top-team talks</p>
+    </li>
+    <li>
+      <p class="t-date">Q1 2027</p>
+      <span class="t-dot"></span>
+      <p class="t-title">Proceedings paper</p>
+      <p class="t-body">Authorship for top-3 per track</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ─────────────────────────── 07 · PRIZES ─────────────────────────── -->
+<section class="section section--cream" id="prizes">
+  <p class="section-num">07 · Prizes &amp; Recognition</p>
+  <h2 class="display">Cash, travel grants, and authorship.</h2>
+
+  <div class="prize-grid">
+    <div class="prize-card">
+      <p class="prize-eyebrow">Prize categories</p>
+      <ul class="prize-list">
+        <li><span class="p-name">Grand prize</span><span class="p-detail">Strong performance on both tracks</span></li>
+        <li><span class="p-name">Track A winner</span><span class="p-detail">Within-respondent imputation</span></li>
+        <li><span class="p-name">Track B winner</span><span class="p-detail">Cross-respondent generalization</span></li>
+        <li><span class="p-name">Travel grants</span><span class="p-detail">Reserved for LMIC and under-represented teams</span></li>
+      </ul>
+      <p class="prize-footnote">Prize-pool amounts and per-tier allocations will be announced at public launch.</p>
+    </div>
+
+    <div class="prize-card prize-card--burgundy">
+      <p class="prize-eyebrow">Non-monetary recognition</p>
+      <ul class="prize-list">
+        <li><span class="p-name">Proceedings authorship</span><span class="p-detail">Top-3 per track invited to co-author the Competition Track paper</span></li>
+        <li><span class="p-name">NeurIPS podium</span><span class="p-detail">10-minute method talks for top-3 per track</span></li>
+        <li><span class="p-name">Invited talk</span><span class="p-detail">Grand-prize team gets an invited slot at the session</span></li>
+        <li><span class="p-name">UN Applied Impact commendation</span><span class="p-detail">Jointly awarded with the UN Behavioural Science Group for approaches considered for follow-up evaluation in UN operational workflows</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── TEAM ─────────────────────────── -->
+<section class="section section--cream" id="team">
+  <p class="section-num">Organizing team</p>
+  <h2 class="display">Six organizers across Stanford, UNICEF, UNHCR, and the UN Behavioural Science Group.</h2>
+
+  <div class="team-grid">
+    <article class="bio">
+      <h3>Andreas Haupt</h3>
+      <p class="bio-affil">Stanford HAI · Digital Economy Lab</p>
+      <p>HAI Postdoctoral Fellow jointly in Stanford's Economics and Computer Science departments. PhD from MIT; co-author of the forthcoming textbook <em>Machine Learning from Human Preferences</em>.</p>
+    </article>
+    <article class="bio">
+      <h3>Mary MacLennan</h3>
+      <p class="bio-affil">UN Innovation Network</p>
+      <p>Senior Advisor on Behavioural Science to the Executive Office of the UN Secretary-General; leads the UN Behavioural Science Group. Convenes the UNICEF and UNHCR data-custodian counterparts.</p>
+    </article>
+    <article class="bio">
+      <h3>Ukasha Ramli</h3>
+      <p class="bio-affil">UNICEF</p>
+      <p>Behavioural science global lead at UNICEF; data steward for the Community Rapid Assessment 2.0 and the Faith &amp; Immunisation Survey.</p>
+    </article>
+    <article class="bio">
+      <h3>Rebeca Moreno Jiménez</h3>
+      <p class="bio-affil">UNHCR</p>
+      <p>Leads innovation data work at UNHCR over refugee and asylum-seeker microdata; owns the technical specification and ingestion pathway for UNHCR-contributed data.</p>
+    </article>
+    <article class="bio">
+      <h3>Alex Pentland</h3>
+      <p class="bio-affil">Stanford HAI · MIT</p>
+      <p>Toshiba Professor Emeritus at MIT, Professor (Research) at Stanford. Long-standing engagement with multilateral institutions on data governance for development and humanitarian contexts.</p>
+    </article>
+    <article class="bio">
+      <h3>Sanmi Koyejo</h3>
+      <p class="bio-affil">Stanford CS · STAIR</p>
+      <p>Associate Professor of Computer Science at Stanford and director of Stanford Trustworthy AI Research (STAIR). Methodological expertise on trustworthy evaluation and benchmark design.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ─────────────────────────── CTA / FOOTER ─────────────────────────── -->
+<section class="cta section--burgundy">
+  <div class="cta-inner">
+    <h2 class="display display--inv">Be ready for August 1.</h2>
+    <p class="cta-sub">Registration opens with the public launch on <strong>August 1, 2026</strong>. Drop us a line to be notified when the leaderboard and starter kit go live — or with questions about the task, the data, or eligibility.</p>
+    <div class="cta-row">
+      <a class="btn btn--coral" href="mailto:neurips-un-benchmark@stanford.edu?subject=un-bench%20launch%20notification">Get launch notification</a>
+      <a class="btn btn--ghost" href="mailto:neurips-un-benchmark@stanford.edu?subject=un-bench%20question">Ask a question</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 un-bench.org · Synthetic Humanitarian Surveys at Scale</p>
+    <p>Stanford Trustworthy AI Research (STAIR) · Stanford HAI · UN Behavioural Science Group · UNICEF · UNHCR</p>
+  </div>
+</footer>
+
+</body>
+</html>
