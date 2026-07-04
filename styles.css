@@ -783,6 +783,40 @@ img, svg { display: block; max-width: 100%; }
   color: var(--ink-soft);
 }
 
+/* ───────────────── team groups ───────────────── */
+.team-block + .team-block { margin-top: 2.75rem; }
+.team-role {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--coral);
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(92, 24, 21, 0.14);
+}
+
+/* ───────────────── competition card ───────────────── */
+.competition-card { text-decoration: none; display: block; transition: transform 0.15s; }
+.competition-card:hover { transform: translateY(-2px); }
+.competition-cta {
+  font-family: var(--display);
+  font-weight: 600;
+  color: var(--coral) !important;
+  margin-top: 1rem !important;
+}
+
+/* ───────────────── data callout ───────────────── */
+.callout-note {
+  margin-top: 1.4rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--coral);
+  background: #FAF4E6;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.96rem;
+}
+
 /* ───────────────── cta ───────────────── */
 .cta {
   padding: clamp(4rem, 8vw, 6rem) var(--gutter);
@@ -835,7 +869,40 @@ img, svg { display: block; max-width: 100%; }
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 0.5rem 1.5rem;
+  gap: 1.5rem;
 }
 .footer p { margin: 0; }
+.footer-brand { display: flex; flex-direction: column; gap: 0.35rem; }
+.footer-links { display: flex; flex-direction: column; gap: 0.45rem; }
+.footer-links a {
+  color: rgba(242, 235, 219, 0.78);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--cream); text-decoration: underline; }
+.footer-sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+.footer-sponsor > span {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  color: rgba(242, 235, 219, 0.5);
+}
+.modal-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--cream);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+.modal-logo:hover { opacity: 0.85; }
