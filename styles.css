@@ -782,6 +782,13 @@ img, svg { display: block; max-width: 100%; }
   line-height: 1.5;
   color: var(--ink-soft);
 }
+.bio a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(225, 75, 44, 0.55);
+}
+.bio a:hover { text-decoration-color: var(--coral); }
 
 /* ───────────────── team groups ───────────────── */
 .team-block + .team-block { margin-top: 2.75rem; }
@@ -906,3 +913,79 @@ img, svg { display: block; max-width: 100%; }
   letter-spacing: -0.01em;
 }
 .modal-logo:hover { opacity: 0.85; }
+
+/* ───────────────── data photos ───────────────── */
+.data-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+}
+.data-photo {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+.data-photo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.data-photo figcaption {
+  padding: 0.85rem 1rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.data-photo .photo-credit {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--coral);
+  font-weight: 700;
+}
+.data-photo .photo-credit strong { color: var(--burgundy); font-weight: 700; }
+
+/* ───────────────── UN behavioural-science band ───────────────── */
+.bsg-band {
+  background: var(--coral);
+  color: var(--cream);
+  padding: clamp(2.75rem, 6vw, 4rem) var(--gutter);
+}
+.bsg-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+.bsg-copy { max-width: 60ch; }
+.bsg-eyebrow {
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffe6dc;
+}
+.bsg-band h2 {
+  margin: 0 0 0.7rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+.bsg-band p { margin: 0; color: rgba(242, 235, 219, 0.9); line-height: 1.5; font-size: 1.02rem; }
+abbr.weird { text-decoration: underline dotted; text-underline-offset: 2px; cursor: help; letter-spacing: 0.02em; }
+.btn--cream { background: var(--cream); color: var(--burgundy); white-space: nowrap; }
+.btn--cream:hover { background: #fff; }

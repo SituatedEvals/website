@@ -55,7 +55,7 @@
     <ul class="hero-facts">
       <li><strong>Public launch</strong><span>August 1, 2026</span></li>
       <li><strong>Two tracks</strong><span>Imputation · Cross-respondent</span></li>
-      <li><strong>~55,000 respondents</strong><span>23 countries · UNICEF &amp; UNHCR</span></li>
+      <li><strong>~61,000 respondents</strong><span>21 countries · UNICEF, UNHCR &amp; World Bank</span></li>
     </ul>
     <div class="hero-cta">
       <a class="btn btn--coral" href="https://docs.google.com/forms/d/1zx5P0XxUHGQcHgEnSH3eU-APnImDOXeL5u6_FLaE8hI/viewform" target="_blank" rel="noopener">Register interest</a>
@@ -73,14 +73,14 @@
     <div class="prose">
       <p>UNICEF, UNHCR, and humanitarian programs increasingly rely on rapid behavioural surveys to set policy and programming. Field data is slow, expensive, and gappy — driving interest in using LLMs as simulacra of specific populations to pre-test instruments, impute non-response, and run subgroup what-ifs.</p>
       <h3 class="kicker">Why a new benchmark is needed.</h3>
-      <p>Today's evidence on whether these simulacra are faithful is contaminated. Public benchmarks (ANES, GSS, World Values Survey) are in pretraining corpora; models can memorize them. Outside WEIRD subpopulations, simulacra collapse heterogeneity and miscalibrate confidence — silently.</p>
-      <p>This competition runs on UN behavioural microdata that has never been publicly released, scored under a strictly proper rule, with a closed-evaluation architecture where submissions travel to the data rather than the other way around.</p>
+      <p>Today's evidence on whether these simulacra are faithful is contaminated. Public benchmarks (ANES, GSS, World Values Survey) are in pretraining corpora; models can memorize them. Outside <abbr class="weird" title="Western, Educated, Industrialized, Rich, and Democratic">WEIRD</abbr> subpopulations — Western, Educated, Industrialized, Rich, and Democratic samples, on which most published survey data is drawn — simulacra collapse heterogeneity and miscalibrate confidence, silently.</p>
+      <p>This competition runs on behavioural microdata from UN and World Bank programs that has never been publicly released, scored under a strictly proper rule, with a closed-evaluation architecture where submissions travel to the data rather than the other way around.</p>
     </div>
 
     <div class="stats">
       <div class="stat">
-        <p class="stat-num">~55,000</p>
-        <p class="stat-label">respondents across 23 countries in unreleased UNICEF and UNHCR microdata</p>
+        <p class="stat-num">~61,000</p>
+        <p class="stat-label">respondents across 21 countries in unreleased UNICEF, UNHCR, and World Bank microdata</p>
       </div>
       <div class="stat">
         <p class="stat-num">0</p>
@@ -88,7 +88,7 @@
       </div>
       <div class="stat">
         <p class="stat-num">4</p>
-        <p class="stat-label">live UN survey programs (CRA 2.0, Faith &amp; Immunisation, MENA Climate KAP, UNHCR ERPIS)</p>
+        <p class="stat-label">behavioural-survey programs (CRA 2.0, Faith &amp; Immunisation, World Bank SkillCraft, UNHCR ERPIS)</p>
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@
   <div class="two-col two-col--wide">
     <div class="prose">
       <ul class="bullets">
-        <li><strong>A new dataset, not benchmaxed.</strong> Four UN behavioural-science instruments not in any pretraining corpus.</li>
+        <li><strong>A new dataset, not benchmaxed.</strong> Four behavioural-science instruments from UN and World Bank programs, not in any pretraining corpus.</li>
         <li><strong>Calibration-first, log-loss-scored evaluation.</strong> A strictly proper rule that rewards truthful probabilities, not accuracy on the modal class.</li>
         <li><strong>Apples-to-apples comparison</strong> across tabular diffusion, IRT, low-rank matrix completion, and LLM-prompted simulacra — on identical held-out masks.</li>
         <li><strong>Open-source starter kit.</strong> MIT-licensed baselines, schema-only specification, and a synthetic sandbox at launch.</li>
@@ -115,7 +115,7 @@
       <dl>
         <div><dt>Task</dt><dd>Probabilistic completion of a respondent × question matrix</dd></div>
         <div><dt>Tracks</dt><dd>(A) within-respondent imputation · (B) cross-respondent generalization</dd></div>
-        <div><dt>Data</dt><dd>UNICEF microdata (CRA 2.0, Faith &amp; Immunisation, MENA KAP) plus UNHCR ERPIS</dd></div>
+        <div><dt>Data</dt><dd>UNICEF microdata (CRA 2.0, Faith &amp; Immunisation), World Bank SkillCraft, plus UNHCR ERPIS</dd></div>
         <div><dt>Architecture</dt><dd>Closed evaluation: organizers run code; data never leaves Stanford</dd></div>
         <div><dt>Metric</dt><dd>Mean test log-loss — strictly proper, calibration-sensitive</dd></div>
         <div><dt>Compute cap</dt><dd>100 min on a single A100 at test; outbound network disabled</dd></div>
@@ -137,7 +137,7 @@
           <div class="matrix-head-cell matrix-head-cell--opinion">Opinion</div>
         </div>
         <div class="matrix-body" aria-hidden="true"></div>
-        <p class="matrix-axis">N respondents × K items (≈ 55,000 × ~150 in this competition)</p>
+        <p class="matrix-axis">N respondents × K items (≈ 61,000 × ~150 in this competition)</p>
         <ul class="legend">
           <li><span class="sw sw--obs"></span>Observed (training)</li>
           <li><span class="sw sw--held"></span>Held-out — predict P(answer)</li>
@@ -171,13 +171,13 @@
 <!-- ─────────────────────────── 04 · DATA ─────────────────────────── -->
 <section class="section section--cream" id="data">
   <p class="section-num">04 · Data</p>
-  <h2 class="display">Three UNICEF assets, one UNHCR instrument. <em>None publicly available.</em></h2>
+  <h2 class="display">Two UNICEF assets, one World Bank asset, one UNHCR instrument. <em>None publicly available.</em></h2>
 
   <p class="prose-wide">
-    The three UNICEF assets (CRA 2.0, Faith &amp; Immunisation, MENA Climate KAP) are confirmed; the UNHCR ERPIS instrument targets Syrian refugees in four host countries and is included conditional on UNHCR data-governance approval. Participants do not receive the microdata. You receive (i) a schema-only specification with column names, types, and response-category codes; (ii) a small synthetic sandbox to debug the submission pipeline; (iii) the submission API specification.
+    The two UNICEF assets (CRA 2.0, Faith &amp; Immunisation) are confirmed; the World Bank SkillCraft instrument profiles the skills of unemployed youth in South Africa; and the UNHCR ERPIS instrument targets Syrian refugees in four host countries and is included conditional on UNHCR data-governance approval. Participants do not receive the microdata. You receive (i) a schema-only specification with column names, types, and response-category codes; (ii) a small synthetic sandbox to debug the submission pipeline; (iii) the submission API specification.
   </p>
 
-  <p class="prose-wide callout-note"><strong>More data may be added before launch.</strong> The instrument list below reflects what is confirmed today. Additional UN survey programs may join the benchmark up until the public launch on <strong>August 1, 2026</strong> — the schema specification will be updated as new assets clear data governance.</p>
+  <p class="prose-wide callout-note"><strong>More data may be added before launch.</strong> The instrument list below reflects what is confirmed today. Additional survey programs may join the benchmark up until the public launch on <strong>August 1, 2026</strong> — the schema specification will be updated as new assets clear data governance.</p>
 
   <div class="data-table-wrap">
     <table class="data-table">
@@ -186,19 +186,51 @@
           <th></th>
           <th>CRA 2.0</th>
           <th>Faith &amp; Immunisation</th>
-          <th>MENA Climate</th>
+          <th>SkillCraft</th>
           <th>ERPIS 2025</th>
         </tr>
       </thead>
       <tbody>
-        <tr><th>Countries</th><td>6</td><td>10</td><td>3</td><td>4</td></tr>
+        <tr><th>Custodian</th><td>UNICEF</td><td>UNICEF</td><td>World Bank</td><td>UNHCR</td></tr>
+        <tr><th>Countries</th><td>6</td><td>10</td><td>1</td><td>4</td></tr>
         <tr><th>Waves</th><td>3</td><td>1</td><td>1</td><td>2</td></tr>
-        <tr><th>N total</th><td>20,229</td><td>19,847</td><td>1,236</td><td>13,821</td></tr>
-        <tr><th>Items / wave</th><td>72</td><td>26</td><td>168</td><td>110</td></tr>
-        <tr><th>Socio-demographic vars</th><td>10</td><td>5</td><td>16</td><td>15</td></tr>
-        <tr><th>Attitude / behaviour vars</th><td>50</td><td>13</td><td>129</td><td>115</td></tr>
+        <tr><th>N total</th><td>20,229</td><td>19,847</td><td>7,000</td><td>13,821</td></tr>
+        <tr><th>Items / wave</th><td>72</td><td>26</td><td>58</td><td>110</td></tr>
+        <tr><th>Socio-demographic vars</th><td>10</td><td>5</td><td>12</td><td>15</td></tr>
+        <tr><th>Attitude / behaviour vars</th><td>50</td><td>13</td><td>46</td><td>115</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="data-photos">
+    <figure class="data-photo">
+      <img src="assets/unicef2.png" alt="UNICEF community engagement in the field" loading="lazy" />
+      <figcaption>
+        Community health and vaccine-confidence outreach of the kind captured by UNICEF's Community Rapid Assessment 2.0.
+        <span class="photo-credit">Photo · <strong>UNICEF</strong></span>
+      </figcaption>
+    </figure>
+    <figure class="data-photo">
+      <img src="assets/unicef8.png" alt="UNICEF field programming with families" loading="lazy" />
+      <figcaption>
+        Faith-leader and caregiver engagement behind the UNICEF Faith &amp; Immunisation Survey.
+        <span class="photo-credit">Photo · <strong>UNICEF</strong></span>
+      </figcaption>
+    </figure>
+    <figure class="data-photo">
+      <img src="assets/unhcr4.JPG" alt="UNHCR field operations with displaced people" loading="lazy" />
+      <figcaption>
+        Displacement settings of the sort surveyed by UNHCR's ERPIS instrument among Syrian refugees across four host countries.
+        <span class="photo-credit">Photo · <strong>UNHCR</strong></span>
+      </figcaption>
+    </figure>
+    <figure class="data-photo">
+      <img src="assets/unhcr5.JPG" alt="UNHCR registration and assistance operations" loading="lazy" />
+      <figcaption>
+        Registration and assistance operations that frame the UNHCR ERPIS refugee microdata.
+        <span class="photo-credit">Photo · <strong>UNHCR</strong></span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -327,7 +359,7 @@
 <!-- ─────────────────────────── TEAM ─────────────────────────── -->
 <section class="section section--cream" id="team">
   <p class="section-num">Organizing team</p>
-  <h2 class="display">Nine people across Stanford, UNICEF, UNHCR, and the UN Behavioural Science Group.</h2>
+  <h2 class="display">Ten people across Stanford, UNICEF, UNHCR, the World Bank, and the UN Behavioural Science Group.</h2>
 
   <div class="team-block">
     <h3 class="team-role">Lead organizers</h3>
@@ -379,6 +411,11 @@
         <p class="bio-affil">Stanford</p>
         <p>Researcher at Stanford on the measurement and evaluation of AI systems; builds and maintains the closed-evaluation harness, submission API, and leaderboard.</p>
       </article>
+      <article class="bio">
+        <h3>Vani Bhatnagar</h3>
+        <p class="bio-affil">Design · <a href="https://www.vanibhatnagar.com/" target="_blank" rel="noopener">vanibhatnagar.com</a></p>
+        <p>Designer leading the visual identity and competition theme for SimulacraBench — brand, web, and participant-facing materials. <a href="mailto:vanibhatnagar4@gmail.com">vanibhatnagar4@gmail.com</a></p>
+      </article>
     </div>
   </div>
 
@@ -399,6 +436,18 @@
   </div>
 </section>
 
+<!-- ─────────────────────────── UN BEHAVIOURAL SCIENCE ─────────────────────────── -->
+<section class="bsg-band" id="behavioural-science">
+  <div class="bsg-inner">
+    <div class="bsg-copy">
+      <p class="bsg-eyebrow">Behavioural Science at the UN</p>
+      <h2>Interested in behavioural science at the UN?</h2>
+      <p>Behind SimulacraBench sits the UN Behavioural Science Group. If you want to hear about behavioural-science work across the UN system — research, data partnerships, and collaborations — register your interest.</p>
+    </div>
+    <a class="btn btn--cream" href="https://forms.gle/ELdY4WvgJZPUV8ab7" target="_blank" rel="noopener">Express interest →</a>
+  </div>
+</section>
+
 <!-- ─────────────────────────── CTA / FOOTER ─────────────────────────── -->
 <section class="cta section--burgundy">
   <div class="cta-inner">
@@ -416,11 +465,11 @@
     <div class="footer-brand">
       <p>© 2026 Situated Evals · situatedevals.org</p>
       <p>SimulacraBench — a Situated Evals competition</p>
-      <p>Stanford Trustworthy AI Research (STAIR) · Stanford HAI · UN Behavioural Science Group · UNICEF · UNHCR</p>
+      <p>Stanford Trustworthy AI Research (STAIR) · Stanford HAI · UN Behavioural Science Group · UNICEF · UNHCR · World Bank</p>
     </div>
     <div class="footer-links">
       <a href="https://docs.google.com/forms/d/1zx5P0XxUHGQcHgEnSH3eU-APnImDOXeL5u6_FLaE8hI/viewform" target="_blank" rel="noopener">Register interest (participants)</a>
-      <a href="https://forms.gle/ELdY4WvgJZPUV8ab7" target="_blank" rel="noopener">UN data-partner signup</a>
+      <a href="https://forms.gle/ELdY4WvgJZPUV8ab7" target="_blank" rel="noopener">Interest in Behavioural Science at the UN</a>
     </div>
     <div class="footer-sponsor">
       <span>Compute generously sponsored by</span>
