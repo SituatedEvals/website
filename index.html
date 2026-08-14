@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SimulacraBench · Closing the Simulacra Gap in Development Data</title>
-<meta name="description" content="A Situated Evals competition at NeurIPS 2026. Validate AI representations of hard-to-reach populations on unreleased UNICEF, UNHCR, and World Bank microdata. Public launch August 17, 2026.">
+<title>SimulacraBench · Benchmarking AI's Ability to Augment Development Data</title>
+<meta name="description" content="A NeurIPS 2026 competition. Validate AI representations of hard-to-reach populations on unreleased UNHCR, UNICEF, and World Bank microdata. Public launch August 17, 2026.">
 <!-- Brand rule: crimson only. No Situated Evals blue anywhere on this page,
      including the parent lockup and the footer. --sky appears exactly once
      (the microdata at rest, inside the closed-evaluation diagram). grep
@@ -39,7 +39,7 @@
 
 <header class="site-header">
   <div class="shell header-row">
-    <a class="lockup" href="/simulacrabench" aria-label="SimulacraBench home">
+    <a class="lockup" href="/" aria-label="SimulacraBench home">
       <svg class="mark" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <path class="mark-left" d="M0 46 V24 A12 12 0 0 1 24 24 V46 Z"/>
           <path class="mark-right" d="M25.8 46 V10.1 A10.1 10.1 0 0 1 46 10.1 V46 Z"/>
@@ -75,26 +75,33 @@
         <p class="eyebrow hero-eyebrow"><span class="arch-glyph" aria-hidden="true"></span>NeurIPS 2026 · Competition Track</p>
         <h1 id="hero-h">
           <span class="h1-name">SimulacraBench</span>
-          <span class="h1-tag">Closing the Simulacra Gap in Development&nbsp;Data</span>
+          <span class="h1-tag">Benchmarking AI's Ability to Augment Development&nbsp;Data</span>
         </h1>
-        <p class="hero-statement">SimulacraBench is a Situated Evals competition to validate AI representations of hard-to-reach populations, evaluated on unreleased UN microdata.</p>
+        <p class="hero-statement">SimulacraBench is a NeurIPS competition to validate AI representations of hard-to-reach populations, evaluated on unreleased UNHCR, UNICEF, and World Bank microdata.</p>
         <dl class="facts">
           <div class="fact">
             <dt>Public launch</dt>
             <dd>August 17, 2026</dd>
           </div>
-          <div class="fact">
-            <dt>Tracks</dt>
-            <dd>Cross-respondent</dd>
+          <div class="fact fact-deadline">
+            <dt>Development submissions close</dt>
+            <dd>October 30, 2026</dd>
           </div>
           <div class="fact">
             <dt>~40,000 respondents</dt>
-            <dd>15 countries</dd>
+            <dd>16 countries</dd>
           </div>
         </dl>
         <div class="cta-row">
           <a class="pill pill-solid pill-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Register interest</a>
-          <a class="pill pill-outline pill-lg" href="https://www.codabench.org/competitions/17822/">Explore Competition Platform</a>
+        </div>
+        <!-- The three that sit alongside the primary call: one tier down in
+             size so the row reads as "and also these", not as four equal
+             choices competing for the same click. -->
+        <div class="cta-row cta-secondary">
+          <a class="pill pill-outline pill-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Behavioural Science &amp; AI Exchange</a>
+          <a class="pill pill-outline pill-sm" href="https://www.unhcr.org/innovation/stories-insights/stories/can-ai-help-us-hear-communities-more-clearly-and-efficiently">The UNHCR story</a>
+          <a class="pill pill-outline pill-sm" href="https://www.codabench.org/competitions/17822/">Competition platform</a>
         </div>
 
         <!-- The notebook sits directly under the two calls to action: the third
@@ -145,7 +152,7 @@
       <p class="eyebrow"><span class="arch-glyph" aria-hidden="true"></span>About</p>
       <h2 id="about-h" class="section-head">AI is already filling data gaps for hard-to-reach populations. Nobody knows how&nbsp;well.</h2>
       <div class="prose">
-        <p>UNICEF, UNHCR, and humanitarian programs increasingly rely on rapid behavioural surveys to set policy and programming. Field data is slow, expensive, and gappy — driving interest in using LLMs as simulacra of specific populations to pre-test instruments, impute non-response, and run subgroup what-ifs.</p>
+        <p>UNHCR, UNICEF, the World Bank, and humanitarian programs increasingly rely on rapid behavioural surveys to set policy and programming. Field data is often slow, expensive, and gappy — driving interest in using LLMs as simulacra of specific populations to pre-test instruments, impute non-response, and run subgroup what-ifs.</p>
 
 
       </div>
@@ -153,7 +160,7 @@
       <dl class="stats">
         <div class="stat">
           <dt class="stat-fig">~40,000</dt>
-          <dd>respondents across 15 countries</dd>
+          <dd>respondents across 16 countries</dd>
         </div>
         <div class="stat">
           <dt class="stat-fig">0</dt>
@@ -161,7 +168,7 @@
         </div>
         <div class="stat">
           <dt class="stat-fig">3</dt>
-          <dd>behavioural surveys from UNICEF, UNHCR and the World Bank</dd>
+          <dd>behavioural surveys from UNHCR, UNICEF and the World Bank</dd>
         </div>
       </dl>
     </div>
@@ -181,7 +188,7 @@
           <li class="flow-step">
             <span class="flow-num">01</span>
             <h3 class="flow-name">Submission</h3>
-            <p class="flow-line">A zip holding <code>main.py</code> and <code>requirements.txt</code>, implementing <code>predict()</code>. Code, not predictions.</p>
+            <p class="flow-line">A zip holding <code>main.py</code> and <code>requirements.txt</code>, implementing <code>predict()</code>, and optionally a <code>models.txt</code> listing Hugging Face models to be downloaded. Code, not predictions.</p>
           </li>
           <li class="flow-step">
             <span class="flow-num">02</span>
@@ -208,7 +215,7 @@
     <div class="shell">
       <h2 id="why-h" class="eyebrow"><span class="arch-glyph" aria-hidden="true"></span>Impact</h2>
       <div class="prose">
-        <p>In classical survey practice, survey participants are asked about questions, and we take means to estimate. If we have good predictions from algorithms, we can augment human labels. This allows us to achieve classical-level accuracy across the full sample at a fraction of the time and cost.</p>
+        <p>In classical survey practice, participants are asked questions and sample means are used to estimate population outcomes. With sufficiently accurate algorithmic predictions, human labels can be augmented, the aim is classical-level accuracy across the full sample at a fraction of the time and cost. Whether that is achievable, and under what conditions, is what this competition sets out to evaluate.</p>
       </div>
 
       <!-- The text equivalent is a real paragraph rather than an aria-label on
@@ -240,16 +247,16 @@
   <!-- ================= Photo band 1 ================= -->
   <figure class="band reveal">
     <div class="band-frame">
-      <img class="band-img" src="assets/photos/RF1495536-1400.jpg"
-           srcset="assets/photos/RF1495536-1400.jpg 1400w, assets/photos/RF1495536-2200.jpg 2200w"
-           sizes="100vw" width="1400" height="933"
-           decoding="async" alt="Three construction workers sift and shovel sand inside an unfinished concrete building, a UNHCR-branded bag resting on a ledge behind them.">
-      <img class="band-img band-duo" src="assets/photos/RF1495536-1400.jpg"
-           srcset="assets/photos/RF1495536-1400.jpg 1400w, assets/photos/RF1495536-2200.jpg 2200w"
-           sizes="100vw" width="1400" height="933" decoding="async" alt="" aria-hidden="true">
+      <img class="band-img" src="assets/photos/UNI639939-1400.jpg"
+           srcset="assets/photos/UNI639939-1400.jpg 1400w, assets/photos/UNI639939-2200.jpg 2200w"
+           sizes="100vw" width="1400" height="934"
+           decoding="async" alt="A health worker in a white coat reads from a patient file while a mother, holding a cup for her small child, sits with her on a bed in a field clinic.">
+      <img class="band-img band-duo" src="assets/photos/UNI639939-1400.jpg"
+           srcset="assets/photos/UNI639939-1400.jpg 1400w, assets/photos/UNI639939-2200.jpg 2200w"
+           sizes="100vw" width="1400" height="934" decoding="async" alt="" aria-hidden="true">
     </div>
     <figcaption class="band-bar">
-      <span class="band-credit">© UNHCR</span>
+      <span class="band-credit">© UNICEF</span>
     </figcaption>
   </figure>
 
@@ -261,7 +268,7 @@
       <ol class="points">
         <li class="point">
           <span class="point-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect class="i-fill" x="0.0" y="0.0" width="6.4" height="6.4"/><rect class="i-fill" x="8.8" y="0.0" width="6.4" height="6.4"/><rect class="i-fill" x="17.6" y="0.0" width="6.4" height="6.4"/><rect class="i-fill" x="0.0" y="8.8" width="6.4" height="6.4"/><rect class="i-fill" x="8.8" y="8.8" width="6.4" height="6.4"/><rect class="i-fill" x="17.6" y="8.8" width="6.4" height="6.4"/><rect class="i-fill" x="0.0" y="17.6" width="6.4" height="6.4"/><rect class="i-fill" x="8.8" y="17.6" width="6.4" height="6.4"/><rect class="i-fill" x="17.6" y="17.6" width="6.4" height="6.4"/></svg></span>
-          <p class="point-text"><b>A new dataset, not benchmaxed.</b> Three unpublished behavioural-science instruments from UN and World Bank programs, not in any pretraining corpus.</p>
+          <p class="point-text"><b>New datasets, not benchmaxed.</b> Three unpublished datasets from UNHCR, UNICEF, and World Bank programs, not in any pretraining corpus.</p>
         </li>
         <li class="point">
           <span class="point-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect class="i-fill" x="0.0" y="0.0" width="6.4" height="6.4"/><rect class="i-line" x="9.5" y="0.7" width="5" height="5"/><rect class="i-line" x="18.3" y="0.7" width="5" height="5"/><rect class="i-line" x="0.7" y="9.5" width="5" height="5"/><rect class="i-fill" x="8.8" y="8.8" width="6.4" height="6.4"/><rect class="i-line" x="18.3" y="9.5" width="5" height="5"/><rect class="i-line" x="0.7" y="18.3" width="5" height="5"/><rect class="i-line" x="9.5" y="18.3" width="5" height="5"/><rect class="i-fill" x="17.6" y="17.6" width="6.4" height="6.4"/></svg></span>
@@ -283,16 +290,16 @@
       <!-- ================= Photo band 2 ================= -->
   <figure class="band reveal">
     <div class="band-frame">
-      <img class="band-img" src="assets/photos/UNI709088-1400.jpg"
-           srcset="assets/photos/UNI709088-1400.jpg 1400w, assets/photos/UNI709088-2200.jpg 2200w"
+      <img class="band-img" src="assets/photos/RF1495536-1400.jpg"
+           srcset="assets/photos/RF1495536-1400.jpg 1400w, assets/photos/RF1495536-2200.jpg 2200w"
            sizes="100vw" width="1400" height="933"
-           loading="lazy" decoding="async" alt="A UNICEF field worker in protective coveralls stands with arms folded in front of a UNICEF-branded tent hung with public health posters.">
-      <img class="band-img band-duo" src="assets/photos/UNI709088-1400.jpg"
-           srcset="assets/photos/UNI709088-1400.jpg 1400w, assets/photos/UNI709088-2200.jpg 2200w"
+           loading="lazy" decoding="async" alt="Three construction workers sift and shovel sand inside an unfinished concrete building, a UNHCR-branded bag resting on a ledge behind them.">
+      <img class="band-img band-duo" src="assets/photos/RF1495536-1400.jpg"
+           srcset="assets/photos/RF1495536-1400.jpg 1400w, assets/photos/RF1495536-2200.jpg 2200w"
            sizes="100vw" width="1400" height="933" loading="lazy" decoding="async" alt="" aria-hidden="true">
     </div>
     <figcaption class="band-bar">
-      <span class="band-credit">© UNICEF</span>
+      <span class="band-credit">© UNHCR</span>
     </figcaption>
   </figure>
 
@@ -300,17 +307,13 @@
   <section id="data" class="section reveal" aria-labelledby="data-h">
     <div class="shell">
       <p class="eyebrow"><span class="arch-glyph" aria-hidden="true"></span>Data</p>
-      <h2 id="data-h" class="section-head">One UNICEF asset, one World Bank asset,<br class="br-wide">
-      one UNHCR instrument.<span class="head-em">None publicly available.</span></h2>
+      <h2 id="data-h" class="section-head">Three instruments, from UNHCR,<br class="br-wide">
+      UNICEF and the World Bank.<span class="head-em">None publicly available.</span></h2>
       <div class="prose">
-        <p>The UNICEF Faith &amp; Immunisation survey covers adults in ten countries on religious influence and vaccine uptake; the World Bank SkillCraft instrument is a single-session online skills assessment of job seekers in South Africa; and the UNHCR ERPIS instrument is a household survey of Syrian refugees in four countries of asylum. Participants do not receive the microdata. You receive (i) a schema-only specification — for each item, the question wording, its class, its allowed answers, and the earlier answer that gates it; (ii) a generator that writes practice data of the schema's exact shape, with invented marginals and invented dependencies; (iii) the grader itself, so you can run a submission locally exactly as it will be run.</p>
+        <p>The UNHCR ERPIS instrument is a household survey of Syrian refugees in four countries of asylum. The UNICEF Faith &amp; Immunisation survey covers adults in ten countries on religious influence and vaccine uptake. The World Bank Skills Assessment is a single-session online instrument for job seekers in southern Africa: among the 38.8% of respondents with a country recorded, 80.4% are in South Africa, 9.7% in Lesotho and 5.4% in Nigeria.</p>
 
-        <details class="disclose">
-          <summary><span>Note on the specification</span><span class="sum-mark" aria-hidden="true"></span></summary>
-          <div class="disclose-body">
-            <p>The three schema files in the public repository are the specification: the figures below are read off them, and a submission has to work from the schema it is handed rather than assume one instrument's shape. Every question string in the UNHCR schema is a gloss reconstructed from the variable name and the observed response labels, not verbatim instrument wording. Any change to the specification is announced to all registered teams and posted here.</p>
-          </div>
-        </details>
+        <p>Participants do not receive the microdata, but (i) a schema-only specification — for each item, the question wording, its class, its allowed answers, and the earlier answer that gates it; (ii) a generator that writes practice data of the schema's exact shape, with invented marginals and invented dependencies; (iii) the grader itself, so you can run a submission locally exactly as it will be run.</p>
+
       </div>
 
       <div class="table-wrap">
@@ -319,47 +322,47 @@
           <thead>
             <tr>
               <td class="dt-corner"><span class="visually-hidden">Attribute</span></td>
+              <th scope="col" data-c="4" tabindex="0">ERPIS</th>
               <th scope="col" data-c="2" tabindex="0">Faith &amp; Immunisation</th>
-              <th scope="col" data-c="3" tabindex="0">SkillCraft</th>
-              <th scope="col" data-c="4" tabindex="0">ERPIS 2025</th>
+              <th scope="col" data-c="3" tabindex="0">Skills Assessment</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Custodian</th>
-              <td data-c="2" class="dt-word">UNICEF</td><td data-c="3" class="dt-word">World Bank</td><td data-c="4" class="dt-word">UNHCR</td>
+              <td data-c="4" class="dt-word">UNHCR</td><td data-c="2" class="dt-word">UNICEF</td><td data-c="3" class="dt-word">World Bank</td>
             </tr>
             <tr>
               <th scope="row">Countries</th>
-              <td data-c="2">10</td><td data-c="3">1</td><td data-c="4">4</td>
+              <td data-c="4">4</td><td data-c="2">10</td><td data-c="3">3</td>
             </tr>
             <tr>
               <th scope="row">Waves</th>
-              <td data-c="2">1</td><td data-c="3">1</td><td data-c="4">2</td>
+              <td data-c="4">2</td><td data-c="2">1</td><td data-c="3">1</td>
             </tr>
             <tr>
               <th scope="row">N total</th>
-              <td data-c="2">19,800</td><td data-c="3">6,900</td><td data-c="4">10,300</td>
+              <td data-c="4">10,300</td><td data-c="2">19,800</td><td data-c="3">6,900</td>
             </tr>
             <tr>
               <th scope="row">Items in schema</th>
-              <td data-c="2">19</td><td data-c="3">106</td><td data-c="4">285</td>
+              <td data-c="4">285</td><td data-c="2">19</td><td data-c="3">106</td>
             </tr>
             <tr>
               <th scope="row">Always visible (GIVEN)</th>
-              <td data-c="2">7</td><td data-c="3">9</td><td data-c="4">17</td>
+              <td data-c="4">17</td><td data-c="2">7</td><td data-c="3">9</td>
             </tr>
             <tr>
               <th scope="row">Scored (PREDICT)</th>
-              <td data-c="2">12</td><td data-c="3">73</td><td data-c="4">213</td>
+              <td data-c="4">213</td><td data-c="2">12</td><td data-c="3">73</td>
             </tr>
             <tr>
               <th scope="row">Mean options per scored item</th>
-              <td data-c="2">4.9</td><td data-c="3">7.0</td><td data-c="4">3.8</td>
+              <td data-c="4">3.8</td><td data-c="2">4.9</td><td data-c="3">7.0</td>
             </tr>
             <tr>
               <th scope="row">Uniform reference <i>U</i> (nats)</th>
-              <td data-c="2">1.528</td><td data-c="3">1.758</td><td data-c="4">1.241</td>
+              <td data-c="4">1.241</td><td data-c="2">1.528</td><td data-c="3">1.758</td>
             </tr>
           </tbody>
         </table>
@@ -368,6 +371,20 @@
              rather than a horizontally scrolling grid. Exactly one of the two
              is rendered at any width. -->
         <ul class="dt-cards">
+          <li class="dt-card">
+            <h3>ERPIS</h3>
+            <dl>
+              <div><dt>Custodian</dt><dd class="dt-word">UNHCR</dd></div>
+              <div><dt>Countries</dt><dd>4</dd></div>
+              <div><dt>Waves</dt><dd>2</dd></div>
+              <div><dt>N total</dt><dd>10,300</dd></div>
+              <div><dt>Items in schema</dt><dd>285</dd></div>
+              <div><dt>Always visible (GIVEN)</dt><dd>17</dd></div>
+              <div><dt>Scored (PREDICT)</dt><dd>213</dd></div>
+              <div><dt>Mean options per scored item</dt><dd>3.8</dd></div>
+              <div><dt>Uniform reference <i>U</i> (nats)</dt><dd>1.241</dd></div>
+            </dl>
+          </li>
           <li class="dt-card">
             <h3>Faith &amp; Immunisation</h3>
             <dl>
@@ -383,10 +400,10 @@
             </dl>
           </li>
           <li class="dt-card">
-            <h3>SkillCraft</h3>
+            <h3>Skills Assessment</h3>
             <dl>
               <div><dt>Custodian</dt><dd class="dt-word">World Bank</dd></div>
-              <div><dt>Countries</dt><dd>1</dd></div>
+              <div><dt>Countries</dt><dd>3</dd></div>
               <div><dt>Waves</dt><dd>1</dd></div>
               <div><dt>N total</dt><dd>6,900</dd></div>
               <div><dt>Items in schema</dt><dd>106</dd></div>
@@ -394,20 +411,6 @@
               <div><dt>Scored (PREDICT)</dt><dd>73</dd></div>
               <div><dt>Mean options per scored item</dt><dd>7.0</dd></div>
               <div><dt>Uniform reference <i>U</i> (nats)</dt><dd>1.758</dd></div>
-            </dl>
-          </li>
-          <li class="dt-card">
-            <h3>ERPIS 2025</h3>
-            <dl>
-              <div><dt>Custodian</dt><dd class="dt-word">UNHCR</dd></div>
-              <div><dt>Countries</dt><dd>4</dd></div>
-              <div><dt>Waves</dt><dd>2</dd></div>
-              <div><dt>N total</dt><dd>10,300</dd></div>
-              <div><dt>Items in schema</dt><dd>285</dd></div>
-              <div><dt>Always visible (GIVEN)</dt><dd>17</dd></div>
-              <div><dt>Scored (PREDICT)</dt><dd>213</dd></div>
-              <div><dt>Mean options per scored item</dt><dd>3.8</dd></div>
-              <div><dt>Uniform reference <i>U</i> (nats)</dt><dd>1.241</dd></div>
             </dl>
           </li>
         </ul>
@@ -434,7 +437,7 @@
         <a class="pill pill-outline pill-lg" href="https://www.codabench.org/competitions/17822/">Leaderboard on Codabench</a>
       </div>
 
-      <p class="kit-langs-note">The notebook is linked from the top of this page in English; translations into the other five official UN languages are in preparation. The schemas, the grader, and the submission contract are English-only.</p>
+      <p class="kit-langs-note">The notebook is linked from the top of this page in English; translations into the other official UN languages are in preparation. The schemas, the grader, and the submission contract are English-only.</p>
     </div>
   </section>
 
@@ -465,7 +468,6 @@
           <summary><span class="acc-title">How submission works</span><span class="sum-mark" aria-hidden="true"></span></summary>
           <div class="acc-body">
             <ul class="ruleset">
-              <li>Submit a zip with <code>main.py</code> and <code>requirements.txt</code> at the top level, implementing <code>predict(frame, schema)</code>.</li>
               <li>Return one probability vector per blank cell, in the schema's item order, non-negative and summing to 1.</li>
               <li>The harness type-checks the data, blanks the held-out cells, installs your requirements, downloads models from Hugging Face, runs <code>predict()</code>, and returns a single score.</li>
               <li>Code can train on the visible rows of the matrix before predicting.</li>
@@ -480,7 +482,7 @@
               <li>Single H100 GPU, 16 GB. 15 minutes per instrument in the development phase; 60 minutes per instrument in the final phase.</li>
               <li>Development phase (Aug 17 – Oct 30, 2026): 1 leaderboard submission per team per day, with no cap over the phase, scored on the same 30% of respondents throughout. Scores come back noised and rounded to 0.01.</li>
               <li>Final phase (Nov 1 – Nov 14, 2026): 1 submission per team, scored exactly, on respondents the development phase never touched. The phases do not nest.</li>
-              <li>Pretrained external weights are allowed if publicly downloadable at a fixed commit hash declared before the final phase opens; any fine-tuned weights must ship inside the submission.</li>
+              <li>External weights are allowed if publicly downloadable from Hugging Face.</li>
             </ul>
           </div>
         </details>
@@ -520,16 +522,16 @@
   <!-- ================= Photo band 4 ================= -->
   <figure class="band reveal">
     <div class="band-frame">
-      <img class="band-img" src="assets/photos/UNI723767-1400.jpg"
-           srcset="assets/photos/UNI723767-1400.jpg 1400w, assets/photos/UNI723767-2200.jpg 2200w"
+      <img class="band-img" src="assets/photos/RF1490462-1400.jpg"
+           srcset="assets/photos/RF1490462-1400.jpg 1400w, assets/photos/RF1490462-2200.jpg 2200w"
            sizes="100vw" width="1400" height="933"
-           loading="lazy" decoding="async" alt="Health workers in gowns and masks walk together down the central aisle of a field treatment tent lined with empty beds.">
-      <img class="band-img band-duo" src="assets/photos/UNI723767-1400.jpg"
-           srcset="assets/photos/UNI723767-1400.jpg 1400w, assets/photos/UNI723767-2200.jpg 2200w"
+           loading="lazy" decoding="async" alt="Three members of a family — an older woman, a teenage boy and a woman in a headscarf — stand together outside their unfinished breeze-block house.">
+      <img class="band-img band-duo" src="assets/photos/RF1490462-1400.jpg"
+           srcset="assets/photos/RF1490462-1400.jpg 1400w, assets/photos/RF1490462-2200.jpg 2200w"
            sizes="100vw" width="1400" height="933" loading="lazy" decoding="async" alt="" aria-hidden="true">
     </div>
     <figcaption class="band-bar">
-      <span class="band-credit">© UNICEF</span>
+      <span class="band-credit">© UNHCR</span>
     </figcaption>
   </figure>
 
@@ -554,18 +556,18 @@
              paragraph. -->
         <p class="grand-prize roots-prize">
           <span class="grand-prize-label">Roots of the Data Prize</span>
-          The highest-scoring team affiliated entirely in one of the 15 countries where the data was collected.
+          The highest-scoring team affiliated entirely in one of the 16 countries where the data was collected.
         </p>
 
         <ul class="rec-grid rec-grid-dark">
-          <li class="rec-card rec-card-dark"><h3>UNICEF skill</h3><p>On the Faith &amp; Immunisation instrument. 12 scored items</p></li>
-          <li class="rec-card rec-card-dark"><h3>World Bank skill</h3><p>On the SkillCraft instrument. 73 scored items</p></li>
           <li class="rec-card rec-card-dark"><h3>UNHCR skill</h3><p>On the ERPIS instrument. 213 scored items</p></li>
+          <li class="rec-card rec-card-dark"><h3>UNICEF skill</h3><p>On the Faith &amp; Immunisation instrument. 12 scored items</p></li>
+          <li class="rec-card rec-card-dark"><h3>World Bank skill</h3><p>On the Skills Assessment instrument. 73 scored items</p></li>
         </ul>
 
         <h3 id="recog-h" class="rec-subhead">How teams are recognized</h3>
 
-        <p class="dark-body">Every winning team gives a talk: once at NeurIPS, and once to the UN teams who are the custodians of these datasets. Prize money will be announced soon.</p>
+        <p class="dark-body">Winning teams will present their work at NeurIPS and have the opportunity to discuss their approaches directly with the teams responsible for the datasets. Prize details will be announced soon.</p>
       </div>
     </div>
   </section>
@@ -574,7 +576,7 @@
   <section id="team" class="section reveal" aria-labelledby="team-h">
     <div class="shell">
       <p class="eyebrow"><span class="arch-glyph" aria-hidden="true"></span>Organizing team</p>
-      <h2 id="team-h" class="section-head">Organizing team<span class="head-sub">Thirteen people across Stanford, UNICEF, UNHCR, the World Bank, and the UN Innovation Network.</span></h2>
+      <h2 id="team-h" class="section-head">Organizing team<span class="head-sub">Sixteen people across Stanford, UNHCR, UNICEF, the World Bank, and the UN Innovation Network.</span></h2>
 
       <div class="team">
         <section aria-labelledby="tg-lead">
@@ -594,7 +596,7 @@
               <details class="person">
                 <summary>
                   <span class="p-name">Mary MacLennan</span>
-                  <span class="p-aff">UN Innovation Network · Stanford HAI</span>
+                  <span class="p-aff">Stanford HAI · UN Innovation Network</span>
                   <span class="sum-mark" aria-hidden="true"></span>
                 </summary>
                 <p class="p-bio">Senior Advisor on Behavioural Science to the Executive Office of the UN Secretary-General; leads the UN Behavioural Science Group. Digital Fellow at Stanford HAI. Convenes the UNICEF and UNHCR data-custodian counterparts.</p>
@@ -604,8 +606,18 @@
         </section>
 
         <section aria-labelledby="tg-sup">
-          <h3 id="tg-sup" class="team-group-head">Academic supervisors</h3>
+          <h3 id="tg-sup" class="team-group-head">Advisors</h3>
           <ul>
+            <li>
+              <details class="person">
+                <summary>
+                  <span class="p-name">Erik Brynjolfsson</span>
+                  <span class="p-aff">Stanford HAI · Digital Economy Lab</span>
+                  <span class="sum-mark" aria-hidden="true"></span>
+                </summary>
+                <p class="p-bio">Director of the Stanford Digital Economy Lab and Jerry Yang and Akiko Yamazaki Professor at Stanford HAI. Works on the economics of AI and on measuring what digital technologies do to productivity and welfare.</p>
+              </details>
+            </li>
             <li>
               <details class="person">
                 <summary>
@@ -685,6 +697,16 @@
             <li>
               <details class="person">
                 <summary>
+                  <span class="p-name">Daniel Alejandro Pinzón Hernández</span>
+                  <span class="p-aff">World Bank</span>
+                  <span class="sum-mark" aria-hidden="true"></span>
+                </summary>
+                <p class="p-bio">Consultant at the World Bank's Mind, Behavior, and Development Unit (eMBeD), working on impact evaluation of behavioural policy and on monitoring, evaluation and learning frameworks for AI initiatives. Specialises in psychometrics, survey design, and measuring soft skills for policy in developing countries.</p>
+              </details>
+            </li>
+            <li>
+              <details class="person">
+                <summary>
                   <span class="p-name">Michelle Dugas</span>
                   <span class="p-aff">World Bank</span>
                   <span class="sum-mark" aria-hidden="true"></span>
@@ -716,6 +738,16 @@
                   <span class="sum-mark" aria-hidden="true"></span>
                 </summary>
                 <p class="p-bio">Researcher at Stanford on the measurement and evaluation of AI systems; builds and maintains the closed-evaluation harness, submission API, and leaderboard.</p>
+              </details>
+            </li>
+            <li>
+              <details class="person">
+                <summary>
+                  <span class="p-name">Sophia Kazinnik</span>
+                  <span class="p-aff">Stanford</span>
+                  <span class="sum-mark" aria-hidden="true"></span>
+                </summary>
+                <p class="p-bio">Economist working on machine learning and text as measurement; contributes to the benchmark's evaluation design and analysis.</p>
               </details>
             </li>
             <li>
@@ -756,7 +788,7 @@
       <div class="bone-module">
         <p class="eyebrow"><span class="arch-glyph" aria-hidden="true"></span>Behavioural Science and AI Exchange</p>
         <h2 id="ex-h" class="section-head">Interested in behavioural and global applications of AI?</h2>
-        <p class="ex-body">The Behavioural Science and AI Exchange brings together researchers, practitioners, governments, civil society, and technology organisations working on AI, behaviour, and deployment in complex settings. Previous sessions have featured speakers from Anthropic, OpenAI, the World Bank, UNICEF, and leading academic experts.</p>
+        <p class="ex-body">The Behavioural Science and AI Exchange brings together researchers, practitioners, governments, civil society, and technology organisations working on AI, behaviour, and deployment in complex settings. Previous sessions have featured speakers from Anthropic, OpenAI, UNHCR, UNICEF, the World Bank, and leading academic experts.</p>
         <a class="arrow-link" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Join the Behavioural Science and AI Exchange
           <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M2 8 H13 M8.5 3.5 L13 8 L8.5 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
@@ -803,13 +835,17 @@
 <footer class="site-footer">
   <div class="shell">
     <div class="footer-top">
-      <a class="lockup lockup-footer" href="#" aria-label="Back to top">
+      <a class="lockup lockup-footer" href="/" aria-label="SimulacraBench home">
         <svg class="mark" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <path class="mark-left" d="M0 46 V24 A12 12 0 0 1 24 24 V46 Z"/>
           <path class="mark-right" d="M25.8 46 V10.1 A10.1 10.1 0 0 1 46 10.1 V46 Z"/>
         </svg>
         <span class="wordmark">Simulacra<span class="wordmark-em">Bench</span></span>
       </a>
+      <!-- Stanford Trustworthy AI Research set as a wordmark rather than a
+           logo: the lab's own mark is not available reversed, and type at the
+           Digital Economy Lab's cap height sits beside it without competing. -->
+      <span class="stair-lockup">Stanford Trustworthy<br>AI&nbsp;Research</span>
       <!-- Stanford Digital Economy Lab, reversed to a single light tone: the
            mark's cardinal red is unreadable on the ink footer. -->
       <a class="del-lockup" href="https://digitaleconomy.stanford.edu" aria-label="Stanford Digital Economy Lab">
@@ -826,7 +862,6 @@
     </div>
 
     <div class="footer-base">
-      <p>© 2026 Situated Evals · situatedevals.org</p>
       <p class="footer-compute">Compute sponsored by
         <a href="https://modal.com" aria-label="Modal">
           <svg class="modal-mark" viewBox="0 0 368 192" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
