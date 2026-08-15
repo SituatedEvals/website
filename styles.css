@@ -447,26 +447,8 @@ button.pill[disabled]:active { transform: none; }
 .partner-strip { display: block; width: 100%; height: auto; }
 
 /* ---------- progressive disclosure ---------- */
-.disclose { border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
-.disclose + p { margin-top: 0.15rem; }
-/* consecutive disclosures sit flush and share one rule, rather than stacking
-   four hairlines within a couple of centimetres */
-.prose .disclose + .disclose { margin-top: -1.35rem; border-top: 0; }
 summary { list-style: none; cursor: pointer; }
 summary::-webkit-details-marker { display: none; }
-.disclose > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.85rem 0;
-  font-weight: 500;
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--crimson);
-}
-.disclose > summary:hover { color: var(--maroon); }
 .sum-mark {
   position: relative;
   width: 0.85rem; height: 0.85rem;
@@ -481,8 +463,6 @@ summary::-webkit-details-marker { display: none; }
 .sum-mark::before { top: 50%; left: 0; width: 100%; height: 1.5px; transform: translateY(-50%); }
 .sum-mark::after { left: 50%; top: 0; height: 100%; width: 1.5px; transform: translateX(-50%); }
 details[open] > summary .sum-mark::after { transform: translateX(-50%) scaleY(0); opacity: 0; }
-.disclose-body { padding-bottom: 1.1rem; display: grid; gap: 1rem; }
-details[open] > .disclose-body,
 details[open] > .acc-body,
 details[open] > .p-bio { animation: unfold 0.25s ease both; }
 
