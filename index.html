@@ -105,18 +105,17 @@
         </div>
 
         <!-- The notebook sits directly under the two calls to action: the third
-             thing you can do from the hero is start reading the task. English is
-             a link; the five pending translations are disabled buttons, not
-             links to nowhere. -->
+             thing you can do from the hero is start reading the task. All six
+             official UN languages are live, one link each. -->
         <div class="hero-kit">
           <h2 class="hero-kit-cap" id="hero-kit-h">Starter notebook</h2>
           <ul class="lang-row" aria-labelledby="hero-kit-h">
-            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorial.ipynb">English</a></li>
-            <li><button class="pill pill-muted pill-sm" type="button" disabled lang="ar" dir="rtl">العربية<span class="lang-soon" dir="ltr">Soon</span></button></li>
-            <li><button class="pill pill-muted pill-sm" type="button" disabled lang="zh">中文<span class="lang-soon">Soon</span></button></li>
-            <li><button class="pill pill-muted pill-sm" type="button" disabled lang="es">Español<span class="lang-soon">Soon</span></button></li>
-            <li><button class="pill pill-muted pill-sm" type="button" disabled lang="fr">Français<span class="lang-soon">Soon</span></button></li>
-            <li><button class="pill pill-muted pill-sm" type="button" disabled lang="ru">Русский<span class="lang-soon">Soon</span></button></li>
+            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorials/en.ipynb">English</a></li>
+            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorials/ar.ipynb" lang="ar" dir="rtl">العربية</a></li>
+            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorials/zh.ipynb" lang="zh">中文</a></li>
+            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorials/es.ipynb" lang="es">Español</a></li>
+            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorials/fr.ipynb" lang="fr">Français</a></li>
+            <li><a class="pill pill-outline pill-sm" href="https://github.com/SituatedEvals/public/blob/main/tutorials/ru.ipynb" lang="ru">Русский</a></li>
           </ul>
         </div>
       </div>
@@ -276,7 +275,7 @@
         </li>
         <li class="point">
           <span class="point-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect class="i-fill" x="0.0" y="0.0" width="6.4" height="6.4"/><rect class="i-line" x="9.5" y="0.7" width="5" height="5"/><rect class="i-fill" x="17.6" y="0.0" width="6.4" height="6.4"/><rect class="i-fill" x="0.0" y="8.8" width="6.4" height="6.4"/><rect class="i-line" x="9.5" y="9.5" width="5" height="5"/><rect class="i-fill" x="17.6" y="8.8" width="6.4" height="6.4"/><rect class="i-fill" x="0.0" y="17.6" width="6.4" height="6.4"/><rect class="i-line" x="9.5" y="18.3" width="5" height="5"/><rect class="i-fill" x="17.6" y="17.6" width="6.4" height="6.4"/></svg></span>
-          <p class="point-text"><b>Apples-to-apples comparison</b> against two published baselines — a trivial crowd marginal and TabPFN — on identical held-out respondents.</p>
+          <p class="point-text"><b>Apples-to-apples comparison</b> against two published baselines — a trivial crowd marginal and an LLM prior — on identical held-out respondents.</p>
         </li>
         <li class="point">
           <span class="point-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect class="i-line" x="0.7" y="0.7" width="5" height="5"/><rect class="i-line" x="9.5" y="0.7" width="5" height="5"/><rect class="i-line" x="18.3" y="0.7" width="5" height="5"/><rect class="i-line" x="0.7" y="9.5" width="5" height="5"/><rect class="i-line" x="9.5" y="9.5" width="5" height="5"/><rect class="i-line" x="18.3" y="9.5" width="5" height="5"/><rect class="i-line" x="0.7" y="18.3" width="5" height="5"/><rect class="i-line" x="9.5" y="18.3" width="5" height="5"/><rect class="i-line" x="18.3" y="18.3" width="5" height="5"/></svg></span>
@@ -420,16 +419,14 @@
 
   <!-- ================= Starter kit ================= -->
   <!-- The repository is the specification, so the links are the section: one
-       row of live actions, then the translation row, which is deliberately
-       inert until each notebook is reviewed. Disabled buttons rather than
-       dead links — a control that cannot act should not look like one that
-       can. -->
+       row of live actions, then the language row, one live link per official
+       UN language. -->
   <section id="starter-kit" class="section reveal" aria-labelledby="kit-h">
     <div class="shell">
       <p class="eyebrow"><span class="arch-glyph" aria-hidden="true"></span>Starter kit</p>
       <h2 id="kit-h" class="section-head">Everything except the data.<span class="head-em">Public, MIT-licensed, today.</span></h2>
       <div class="prose">
-        <p>The repository holds the three schemas, the sandbox generator, the grader, the two baselines, and a <a href="https://github.com/SituatedEvals/public/blob/main/tutorial.ipynb">tutorial notebook</a> that builds the submission format up one piece at a time. It holds no microdata: the schemas describe settings, questions, and answer options only.</p>
+        <p>The repository holds the three schemas, the sandbox generator, the grader, the two baselines, and a <a href="https://github.com/SituatedEvals/public/tree/main/tutorials">tutorial notebook</a> that builds the submission format up one piece at a time. It holds no microdata: the schemas describe settings, questions, and answer options only.</p>
       </div>
 
       <div class="cta-row kit-actions">
@@ -437,7 +434,7 @@
         <a class="pill pill-outline pill-lg" href="https://www.codabench.org/competitions/17822/">Leaderboard on Codabench</a>
       </div>
 
-      <p class="kit-langs-note">The notebook is linked from the top of this page in English; translations into the other official UN languages are in preparation. The schemas, the grader, and the submission contract are English-only.</p>
+      <p class="kit-langs-note">The notebook is linked from the top of this page in all six official UN languages. The schemas, the grader, and the submission contract are English-only.</p>
     </div>
   </section>
 
@@ -490,7 +487,7 @@
           <summary><span class="acc-title">What ships with the starter kit</span><span class="sum-mark" aria-hidden="true"></span></summary>
           <div class="acc-body">
             <ul class="ruleset">
-              <li>Two baselines. The trivial one predicts each item's smoothed crowd shares and ignores everything about the individual respondent; it is what you have to beat. The second is TabPFN.</li>
+              <li>Two baselines. The trivial one predicts each item's smoothed crowd shares and ignores everything about the individual respondent; it is what you have to beat. The second is an LLM prior.</li>
               <li>A sandbox generator that writes practice data of the schema's exact shape, obeying the skip logic, with invented marginals and invented dependencies. A model tuned to it will not transfer; a pipeline debugged against it will.</li>
               <li>The grader, so you can score a submission locally the way it will be scored: fresh virtual environment, dependencies installed, network cut.</li>
               <li>A tutorial notebook, the three schemas, and the config that fixes the phases, time limits, and privacy parameters.</li>
