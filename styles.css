@@ -803,6 +803,27 @@ details[open] > .p-bio { animation: unfold 0.25s ease both; }
   font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
   color: var(--on-dark);
 }
+/* the fourteen countries, set as a wrapped mono row so the list reads as data
+   rather than as a second sentence of prose */
+.roots-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.roots-countries li {
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--on-dark-line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--on-dark);
+  white-space: nowrap;
+}
 .grand-prize-label {
   display: block;
   font-family: var(--mono);
