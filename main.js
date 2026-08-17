@@ -83,7 +83,7 @@
 
   /* ============================================================ countdown */
   /* Two states live in the DOM, and the page moves through them in order:
-     before August 17, 2026 the pre-launch state counts down to the launch;
+     before August 18, 2026 the pre-launch state counts down to the launch;
      from then until October 30 the development-phase state counts down to the
      deadline; after that the static line stands alone. The pre-launch state is
      the no-JS default, so the page is correct without this file.
@@ -94,7 +94,7 @@
 
      Neither counter can render a zero or a negative: when a target is reached
      its element is put back to the static line it shipped with. */
-  var LAUNCH = new Date("2026-08-17T00:00:00Z");
+  var LAUNCH = new Date("2026-08-18T00:00:00Z");
   var pre = document.getElementById("cta-pre");
   var post = document.getElementById("cta-post");
 
