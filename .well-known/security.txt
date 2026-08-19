@@ -1,0 +1,27 @@
+# Security contact for simulacrabench.org, per RFC 9116.
+#
+# This site is a static, unauthenticated page served by GitHub Pages. It holds
+# no participant data and no microdata, and the microdata is not reachable from
+# it. Reports about the competition infrastructure itself — the Codabench
+# instance, the evaluation sandbox — are in scope and welcome.
+#
+# Disclosure policy, in full:
+#
+#   - Report anything you find to the address below. We aim to acknowledge
+#     within five working days, and we are glad to credit you once the issue is
+#     resolved. There is no bug bounty.
+#   - We will not pursue legal action against anyone acting in good faith under
+#     this policy.
+#   - In scope: this website, the competition infrastructure we operate, and
+#     the published starter kit at github.com/SituatedEvals/public.
+#   - Out of scope: Codabench, Google Forms, GitHub, and Modal as platforms.
+#     Report those to their own security teams, and tell us so we can follow up.
+#   - Please do not test in a way that degrades service for other teams, and do
+#     not access data belonging to anyone else.
+#   - Any finding that appears to touch participant records is the
+#     highest-priority thing you can send us. Say so in the subject line.
+
+Contact: mailto:team@simulacrabench.org
+Expires: 2027-08-18T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://simulacrabench.org/.well-known/security.txt

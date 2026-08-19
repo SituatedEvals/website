@@ -1,0 +1,8 @@
+# simulacrabench.org — NeurIPS 2026 competition site.
+# Public by design: everything here is intended to be indexed. The microdata
+# is not on this site and never will be, so there is nothing here to fence off.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://simulacrabench.org/sitemap.xml

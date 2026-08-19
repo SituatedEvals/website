@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SimulacraBench">
+  <!-- The site lockup's paired-arch mark on an ink tile. Reversed to
+       coral/bone the way the footer lockup is: crimson-on-white loses the
+       right arch against light browser chrome at 16px, and the tile keeps
+       the glyph legible on either theme. Gap widened 1.4u so the two arches
+       still read as two at favicon size. -->
+  <rect width="64" height="64" rx="13" fill="#1C1E21"/>
+  <g transform="translate(8 8.7) scale(1.0127)">
+    <path d="M0 46 V24 A12 12 0 0 1 24 24 V46 Z" fill="#FF7B68"/>
+    <path transform="translate(1.4 0)" d="M25.8 46 V10.1 A10.1 10.1 0 0 1 46 10.1 V46 Z" fill="#F4EDE4"/>
+  </g>
+</svg>

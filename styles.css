@@ -1150,3 +1150,28 @@ html.js .wc-panel[data-step="3"] { --i: 2; }
 @media (max-width: 420px) {
   .fact { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
 }
+
+/* ==========================================================================
+   Footer: site information. A contact address and an institutional
+   attribution line on every page — the two things a reader checking whether
+   this is a real project looks for, and the two a reputation filter reads.
+   ========================================================================== */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+}
+.footer-links a {
+  color: var(--bone);
+  opacity: 0.8;
+  transition: opacity 0.18s ease, color 0.18s ease;
+}
+.footer-links a:hover { opacity: 1; color: var(--coral); }
+.footer-legal {
+  margin: 1.5rem 0 0;
+  max-width: 62ch;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-dark);
+  opacity: 0.72;
+}
