@@ -833,6 +833,19 @@ details[open] > .p-bio { animation: unfold 0.25s ease both; }
   color: var(--coral);
   margin-bottom: 0.5rem;
 }
+/* the amount, set in the label's mono but in bone so it reads as the figure
+   rather than as part of the category name */
+.prize-amount {
+  color: var(--bone);
+  margin-left: 0.5rem;
+}
+.rec-card-amount {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.rec-card-dark p.rec-card-amount { margin-top: 0.85rem; color: var(--coral); }
 .rec-grid-dark {
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1017,6 +1030,14 @@ details[open] > .p-bio { animation: unfold 0.25s ease both; }
   color: rgba(244, 237, 228, 0.72);
 }
 .footer-base a { color: var(--coral); }
+/* both sponsor lines stack at the right, ragged to the same edge as the
+   compute line they sit above */
+.footer-sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
 .footer-compute {
   display: inline-flex;
   align-items: center;
@@ -1096,6 +1117,9 @@ html.js .wc-panel[data-step="3"] { --i: 2; }
 }
 
 @media (max-width: 760px) {
+  /* once the footer row wraps, the sponsor lines sit under the links and
+     should rag left with them */
+  .footer-sponsors { align-items: flex-start; }
   .point { grid-template-columns: 2.25rem minmax(0, 1fr); gap: 0.75rem 1rem; }
   .point-icon { width: 1.6rem; height: 1.6rem; }
   .band-bar { font-size: 0.625rem; }
