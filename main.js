@@ -84,7 +84,7 @@
   /* ============================================================ countdown */
   /* Two states live in the DOM, and the page moves through them in order:
      before August 18, 2026 the pre-launch state counts down to the launch;
-     from then until October 30 the development-phase state counts down to the
+     from then until November 13 the development-phase state counts down to the
      deadline; after that the static line stands alone. The pre-launch state is
      the no-JS default, so the page is correct without this file.
 
