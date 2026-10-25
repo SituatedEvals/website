@@ -104,8 +104,13 @@
             <dd>14 countries</dd>
           </div>
         </dl>
+        <!-- The writeup requirement sits at the very top of the page: every
+             team, not only the winners, submits one, so the OpenReview link is
+             the primary call to action here. -->
+        <p class="hero-notice" id="writeup-notice"><strong>All teams must submit a writeup.</strong> Every participating team is required to submit a writeup describing its method on OpenReview.</p>
         <div class="cta-row">
-          <a class="pill pill-solid pill-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Register interest</a>
+          <a class="pill pill-solid pill-lg" href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">Submit your writeup on OpenReview</a>
+          <a class="pill pill-outline pill-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Register interest</a>
         </div>
         <!-- The three that sit alongside the primary call: one tier down in
              size so the row reads as "and also these", not as four equal
@@ -481,6 +486,7 @@
               <li>The harness type-checks the data, blanks the held-out cells, installs your requirements, downloads models from Hugging Face, runs <code>predict()</code>, and returns a single score.</li>
               <li>Code can train on the visible rows of the matrix before predicting.</li>
               <li><code>predict()</code> must be pure: no files, no sockets, no processes, no imports outside <code>requirements.txt</code>. Requirements install in a build step that has the network but no data; the run has the data but no network.</li>
+              <li>Code goes to Codabench; the writeup goes to <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>. Every team must submit a writeup describing its method.</li>
             </ul>
           </div>
         </details>
@@ -512,7 +518,7 @@
           <div class="acc-body">
             <ul class="ruleset">
               <li>Open to teams from academia, industry, and independent research, except where precluded by sanctions or law. An individual may appear on at most one team.</li>
-              <li>Winning teams supply a 4-page method description and source code under a license permitting non-commercial research reproduction. Everyone else submits code alone.</li>
+              <li>All teams must submit a writeup describing their method via <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>. Winning teams additionally supply a 4-page method description and source code under a license permitting non-commercial research reproduction.</li>
               <li>Microdata are not released. Attempting to access, reconstruct, or re-identify the underlying records — successfully or not — is grounds for disqualification, and so is helping anyone else try.</li>
               <li>Development-phase feedback may be used for ordinary model development, but not to infer hidden labels, reconstruct the evaluation set, or exploit repeated score feedback.</li>
               <li>Teams whose final scores are not distinguishable under the pre-specified paired-bootstrap test are treated as tied.</li>
@@ -523,6 +529,8 @@
 
       <p class="rules-note">The full rules, the forum, and the leaderboard live on
         <a href="https://www.codabench.org/competitions/17822/">Codabench</a>.
+        Writeups are submitted on
+        <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>.
         All competition communication goes through
         <a href="mailto:team@simulacrabench.org">team@simulacrabench.org</a>.</p>
     </div>
