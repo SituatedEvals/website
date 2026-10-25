@@ -490,10 +490,10 @@
           <summary><span class="acc-title">Compute &amp; quotas</span><span class="sum-mark" aria-hidden="true"></span></summary>
           <div class="acc-body">
             <ul class="ruleset">
-              <li>Single H100 GPU, 16 GB. The compute budget is shared across all three instruments: 15 minutes total in the development phase; 60 minutes total in the final phase.</li>
+              <li>Single H100 GPU, 16 GB RAM. The compute budget is shared across all three instruments: 15 minutes total in the development phase; 60 minutes total in the final phase.</li>
               <li>Development phase (Aug 17 – Nov 13, 2026): 1 leaderboard submission per team per day, with no cap over the phase, scored on the same 30% of respondents throughout. Scores come back noised and rounded to 0.01.</li>
               <li>Final phase (Nov 15 – Nov 19, 2026): 1 submission per team, scored exactly, on respondents the development phase never touched. The phases do not nest.</li>
-              <li>External weights are allowed if publicly downloadable from Hugging Face.</li>
+              <li>External weights are allowed if publicly downloadable from Hugging Face or included in the submission package.</li>
             </ul>
           </div>
         </details>
@@ -514,10 +514,10 @@
           <div class="acc-body">
             <ul class="ruleset">
               <li>Open to teams from academia, industry, and independent research, except where precluded by sanctions or law. An individual may appear on at most one team.</li>
-              <li>All teams must submit a writeup describing their method via <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>. Winning teams additionally supply a 4-page method description and source code under a license permitting non-commercial research reproduction.</li>
+              <li>All teams must submit a 4-page writeup describing their method via <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>, together with source code under a license permitting non-commercial research reproduction.</li>
               <li>Microdata are not released. Attempting to access, reconstruct, or re-identify the underlying records — successfully or not — is grounds for disqualification, and so is helping anyone else try.</li>
               <li>Development-phase feedback may be used for ordinary model development, but not to infer hidden labels, reconstruct the evaluation set, or exploit repeated score feedback.</li>
-              <li>Teams whose final scores are not distinguishable under the pre-specified paired-bootstrap test are treated as tied.</li>
+              <li>Winners are determined by the exact, unnoised final-phase score.</li>
             </ul>
           </div>
         </details>
