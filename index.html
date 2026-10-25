@@ -105,7 +105,8 @@
           </div>
         </dl>
         <div class="cta-row">
-          <a class="pill pill-solid pill-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Register interest</a>
+          <a class="pill pill-solid pill-lg" href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">Submit your writeup on OpenReview</a>
+          <a class="pill pill-outline pill-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSea9nL8ffhdvSzGz746rpkkgghdFMlB4x-h1n4eNiqF3Bir9A/viewform">Register interest</a>
         </div>
         <!-- The three that sit alongside the primary call: one tier down in
              size so the row reads as "and also these", not as four equal
@@ -481,6 +482,7 @@
               <li>The harness type-checks the data, blanks the held-out cells, installs your requirements, downloads models from Hugging Face, runs <code>predict()</code>, and returns a single score.</li>
               <li>Code can train on the visible rows of the matrix before predicting.</li>
               <li><code>predict()</code> must be pure: no files, no sockets, no processes, no imports outside <code>requirements.txt</code>. Requirements install in a build step that has the network but no data; the run has the data but no network.</li>
+              <li>Code goes to Codabench; the writeup goes to <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>. Every team must submit a writeup describing its method.</li>
             </ul>
           </div>
         </details>
@@ -490,7 +492,7 @@
             <ul class="ruleset">
               <li>Single H100 GPU, 16 GB. The compute budget is shared across all three instruments: 15 minutes total in the development phase; 60 minutes total in the final phase.</li>
               <li>Development phase (Aug 17 – Nov 13, 2026): 1 leaderboard submission per team per day, with no cap over the phase, scored on the same 30% of respondents throughout. Scores come back noised and rounded to 0.01.</li>
-              <li>Final phase (Nov 14 – Nov 18, 2026): 1 submission per team, scored exactly, on respondents the development phase never touched. The phases do not nest.</li>
+              <li>Final phase (Nov 15 – Nov 19, 2026): 1 submission per team, scored exactly, on respondents the development phase never touched. The phases do not nest.</li>
               <li>External weights are allowed if publicly downloadable from Hugging Face.</li>
             </ul>
           </div>
@@ -512,7 +514,7 @@
           <div class="acc-body">
             <ul class="ruleset">
               <li>Open to teams from academia, industry, and independent research, except where precluded by sanctions or law. An individual may appear on at most one team.</li>
-              <li>Winning teams supply a 4-page method description and source code under a license permitting non-commercial research reproduction. Everyone else submits code alone.</li>
+              <li>All teams must submit a writeup describing their method via <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>. Winning teams additionally supply a 4-page method description and source code under a license permitting non-commercial research reproduction.</li>
               <li>Microdata are not released. Attempting to access, reconstruct, or re-identify the underlying records — successfully or not — is grounds for disqualification, and so is helping anyone else try.</li>
               <li>Development-phase feedback may be used for ordinary model development, but not to infer hidden labels, reconstruct the evaluation set, or exploit repeated score feedback.</li>
               <li>Teams whose final scores are not distinguishable under the pre-specified paired-bootstrap test are treated as tied.</li>
@@ -523,6 +525,8 @@
 
       <p class="rules-note">The full rules, the forum, and the leaderboard live on
         <a href="https://www.codabench.org/competitions/17822/">Codabench</a>.
+        Writeups are submitted on
+        <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Competition/SimulacraBench">OpenReview</a>.
         All competition communication goes through
         <a href="mailto:team@simulacrabench.org">team@simulacrabench.org</a>.</p>
     </div>
