@@ -393,20 +393,6 @@ button.pill[disabled]:active { transform: none; }
    so it carries the crimson rule and the weight the others do not. */
 .fact-deadline { border-bottom-color: var(--crimson); }
 .fact-deadline dd { font-weight: 500; color: var(--crimson); }
-/* The writeup notice: a short, bordered line between the facts and the calls
-   to action, so the one obligation every team carries is read before any
-   button is pressed. */
-.hero-notice {
-  margin-top: 2rem;
-  padding: 0.85rem 1rem;
-  max-width: 52ch;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  border-left: 3px solid var(--crimson);
-  background: rgba(200, 16, 46, 0.06);
-}
-.hero-notice strong { color: var(--crimson); font-weight: 600; }
-.hero .hero-notice + .cta-row { margin-top: 1.1rem; }
 .hero .cta-row { margin-top: 2rem; }
 .hero .cta-secondary { margin-top: 0.7rem; gap: 0.5rem; }
 /* The notebook row: a third, quieter call to action under the two loud ones,
@@ -1076,7 +1062,6 @@ html.js .hero-copy > * { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) bac
 html.js .hero-copy > h1 { animation-delay: 0.04s; }
 html.js .hero-copy > .hero-statement { animation-delay: 0.14s; }
 html.js .hero-copy > .facts { animation-delay: 0.24s; }
-html.js .hero-copy > .hero-notice { animation-delay: 0.3s; }
 html.js .hero-copy > .cta-row { animation-delay: 0.34s; }
 html.js .hero-copy > .cta-secondary { animation-delay: 0.4s; }
 html.js .hero-copy > .hero-kit { animation-delay: 0.5s; }
